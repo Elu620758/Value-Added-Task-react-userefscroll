@@ -1,0 +1,141 @@
+/* Responsive container for the list */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Default for small screens */
+    align-items: center;
+    gap: 20px;
+  }
+  
+  li {
+    width: 100%; /* Full width of the parent container */
+    max-width: 600px; /* Limit the maximum size */
+  }
+  
+  img {
+    width: 100%; /* Scale the image to fit the container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+  }
+  
+  /* Navigation styles */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  /* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Navigation Bar */
+  .navigation {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+  }
+  
+  .navigation button {
+    color: white;
+    background-color: #5c79eb;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .navigation button:hover {
+    background-color: #8af3a2;
+  }
+  
+  /* Image Container */
+  .image-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .image-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+  }
+  
+  .image-item {
+    flex: 0 0 auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .highlight {
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8);
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navigation button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    .image-container {
+      flex-direction: column;
+    }
+  
+    .image-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  
+  /* Responsive styles for larger screens */
+  @media (min-width: 768px) {
+    ul {
+      flex-direction: row; /* Switch to horizontal layout for larger screens */
+      justify-content: center;
+    }
+  
+    li {
+      max-width: 150px; /* Adjust size for horizontal layout */
+    }
+  }
+  
